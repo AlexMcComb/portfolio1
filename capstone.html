@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>Alex McComb Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="W3.CSS">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="index.html" class="w3-bar-item w3-button">
+                <b>ALEX MCCOMB</b>
+            </a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Container -->
+
+    <div class="image_container">
+        <img class="mySlides" src="images/capstone/header.png" style="object-fit: contain; width:90%; height: 120%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+        <img class="mySlides" src="images/capstone/maps.png" style="object-fit: contain; width:90%; height: 120%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+        <img class="mySlides" src="images/capstone/sample.png" style="object-fit: contain; width:90%; height: 170%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+        <img class="mySlides" src="images/capstone/code.png" style="object-fit: contain; width:90%; height:100%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+
+
+
+        <button class="w3-button w3-black w3-display-left" style="font-size: 30px;" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" style="font-size: 30px;" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+
+
+    <!-- Java Image Container -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+    <!-- Project Outline -->
+
+    <div class="outline">
+        <h4><strong>Wild Utah Project Open Data Website</strong></h4>
+
+        <h5>
+            <p>The purpose of the project was to create a website hosting open data that the Wild Utah Project has either curated
+                or created. Wild Utah Project is a non-profit that focuses on conservation concerning wildlife and wildland
+                in Utah. As their research and data increases, there comes a need to share and disseminate their data more
+                efficiently.
+            </p>
+            <br>
+            <p>The website was created using ArcGIS Hub (a WordPress type website creator), HTML, CSS, RESTful Services, and JavaScript, and data were published using Python.  The user is able to serach the server for maps and data, explore it, and download it.  
+            </p>
+        </h5>
+        <h6>
+            <a href="images/capstone/FinalPoster.pdf" target="_blank" class="w3-hover-text-green">
+                <strong>Read Report</strong>
+            </a>
+        </h6>
+
+
+
+    </div>
+
+</body>
+
+</html>
